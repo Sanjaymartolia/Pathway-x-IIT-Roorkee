@@ -11,13 +11,6 @@ This demo allows you to:
 
   ## How it works (Understanding RAG pipeline)
 - 📄 **app.py**: The main application code, written in Python, using Pathway.
-- 🛠️ **app.yaml**: Configuration file for data sources, OpenAI LLM model, and the web server. Customize this to modify the LLM model, use Google Drive data, or adjust filesystem directories for indexing.
-- 📋 **requirements.txt**: Contains dependencies for the pipeline. Use with `pip install -r` to set up the environment locally.
-- 🐋 **Dockerfile**: Docker configuration for running the pipeline inside a container.
-- 🗝️ **.env**: Environment variables configuration file where the OpenAI key is stored.
-- 📁 **data/**: A folder with example files for running test cases.
-  
-- 📄 **app.py**:
   
   ![llm_01_new](https://github.com/user-attachments/assets/1f48b8d6-13de-4651-8e4d-ed046cf539a8)
   
@@ -25,14 +18,25 @@ This demo allows you to:
   
   ![llm_03_new](https://github.com/user-attachments/assets/bcf6250c-50ff-4a63-b19a-6f0b027817c7)
 
-- 🛠️ **app.yaml**:
+- 🛠️ **app.yaml**:Configuration file for data sources, OpenAI LLM model, and the web server. Customize this to modify the LLM model, use Google Drive data, or adjust filesystem directories for indexing.
   
   ![llm_04_new](https://github.com/user-attachments/assets/4989d07c-a84e-46e8-852e-7e72286e277d)
+
+![google_drive_key](https://github.com/user-attachments/assets/34087429-c7ef-45b9-ac37-c67473b207c0)
 
   **Google Connector**: https://pathway.com/developers/user-guide/connect/connectors/gdrive-connector
 The section config must contain two main parameters:
 **object_id**, containing the ID of the folder that needs to be indexed. It can be found from the URL in the web interface, where it's the last part of the address. For example, the publicly available demo folder in Google Drive has the URL https://drive.google.com/drive/folders/1cULDv2OaViJBmOfG5WB0oWcgayNrGtVs. Consequently, the last part of this address is 1cULDv2OaViJBmOfG5WB0oWcgayNrGtVs, hence this is the object_id you would need to specify.
 **service_user_credentials_file**, containing the path to the credentials files for the Google service account. To get more details on setting up the service account and getting credentials, you can also refer to this tutorial.
+
+- 📋 **requirements.txt**: Contains dependencies for the pipeline. Use with `pip install -r` to set up the environment locally.
+- 🐋 **Dockerfile**: Docker configuration for running the pipeline inside a container.
+- 🗝️ **.env**: Environment variables configuration file where the **OpenAI key** is stored.
+- 📁 **data/**: A folder with example files for running test cases.
+
+  # Insights Deep Dive
+
+  
 
 
 
