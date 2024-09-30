@@ -17,13 +17,22 @@ This demo allows you to:
 - 🗝️ **.env**: Environment variables configuration file where the OpenAI key is stored.
 - 📁 **data/**: A folder with example files for running test cases.
   
-- 📄 **app.py**: 
+- 📄 **app.py**:
+  
   ![llm_01_new](https://github.com/user-attachments/assets/1f48b8d6-13de-4651-8e4d-ed046cf539a8)
+  
   ![llm_02_new](https://github.com/user-attachments/assets/956c7ebf-35ba-4536-9193-25c5331a9830)
+  
   ![llm_03_new](https://github.com/user-attachments/assets/bcf6250c-50ff-4a63-b19a-6f0b027817c7)
 
 - 🛠️ **app.yaml**:
-- ![llm_04_new](https://github.com/user-attachments/assets/4989d07c-a84e-46e8-852e-7e72286e277d)
+  
+  ![llm_04_new](https://github.com/user-attachments/assets/4989d07c-a84e-46e8-852e-7e72286e277d)
+
+  **Google Connector**: https://pathway.com/developers/user-guide/connect/connectors/gdrive-connector
+The section config must contain two main parameters:
+**object_id**, containing the ID of the folder that needs to be indexed. It can be found from the URL in the web interface, where it's the last part of the address. For example, the publicly available demo folder in Google Drive has the URL https://drive.google.com/drive/folders/1cULDv2OaViJBmOfG5WB0oWcgayNrGtVs. Consequently, the last part of this address is 1cULDv2OaViJBmOfG5WB0oWcgayNrGtVs, hence this is the object_id you would need to specify.
+**service_user_credentials_file**, containing the path to the credentials files for the Google service account. To get more details on setting up the service account and getting credentials, you can also refer to this tutorial.
 
 
 
